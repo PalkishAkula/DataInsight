@@ -79,12 +79,9 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-// Only start the server if not in a Vercel environment
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}
+// Always start the server (Render provides PORT env var)
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
-// Export the Express API for Vercel
-export default app; 
+export default app;
