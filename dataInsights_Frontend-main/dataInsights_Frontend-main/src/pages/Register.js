@@ -108,18 +108,18 @@ const Register = () => {
         <Box
             sx={{
                 minHeight: '100vh',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #1976d2 0%, #3f51b5 100%)',
                 display: 'flex',
                 alignItems: 'center',
-                py: 8,
+                py: { xs: 6, md: 10 },
             }}
         >
             <Container maxWidth="sm">
                 <Paper
-                    elevation={24}
+                    elevation={16}
                     sx={{
-                        p: 4,
-                        borderRadius: 2,
+                        p: { xs: 3, md: 4 },
+                        borderRadius: 3,
                         background: 'rgba(255, 255, 255, 0.95)',
                         backdropFilter: 'blur(10px)',
                     }}
@@ -147,7 +147,7 @@ const Register = () => {
                             variant="h4"
                             sx={{
                                 fontWeight: 'bold',
-                                background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                                background: 'linear-gradient(45deg, #1976d2, #3f51b5)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                             }}
@@ -284,9 +284,9 @@ const Register = () => {
                                 mt: 2,
                                 mb: 3,
                                 py: 1.5,
-                                background: 'linear-gradient(45deg, #667eea, #764ba2)',
+                                background: 'linear-gradient(45deg, #1976d2, #3f51b5)',
                                 '&:hover': {
-                                    background: 'linear-gradient(45deg, #764ba2, #667eea)',
+                                    background: 'linear-gradient(45deg, #3f51b5, #1976d2)',
                                 },
                             }}
                         >

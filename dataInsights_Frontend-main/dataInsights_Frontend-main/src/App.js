@@ -1,10 +1,13 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import ChartBuilder from './pages/ChartBuilder';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import FileUpload from './pages/FileUpload';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import ChartBuilder from './pages/ChartBuilder';
 
 const theme = createTheme({
     palette: {
@@ -23,8 +26,10 @@ function App() {
         <ThemeProvider theme={theme}>
             <CssBaseline />
             <BrowserRouter>
+                <Navbar />
                 <Routes>
-                    <Route path="/" element={<Navigate to="/login" replace />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/insights" element={<FileUpload />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/dashboard" element={<ChartBuilder />} />
